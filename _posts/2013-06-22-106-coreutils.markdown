@@ -1,0 +1,154 @@
+---
+layout: post
+title: coreutils的106个命令都是做什么的
+date: 2013-06-22 18:22
+comments: true
+categories: shell
+---
+
+## 说明
+以下命令是GNU系列的，BSD系列下面可能有的命令没有，并且参数可能还有些许差异，请参考它们自己的manpage。
+
+* base64 base64编码解码，gun -d解码, BSD -D解码
+* basename 从字符串中提取出程序名，去掉路径, -s 指定后缀
+ 
+ 
+* cat 输出文件内容到标准输出
+* chcon 修改文件的安全上下文（不知道干嘛的。。）
+* chgrp 修改文件或文件夹所属的组
+* chmod 修改文件或文件夹的读写执行权限
+* chown 修改文件或文件夹的拥有者
+* chroot 在特殊的root文件夹执行命令
+* cksum 打印文件的CRC校验和包含的字节数
+* comm 按行比较2个排好序的文件
+* cp 复制文件或文件夹
+* csplit 根据行或者正则将文件分割成多个文件
+* cut 移除文件中每一行中的部分内容
+ 
+ 
+* date 根据locale打印当前时间
+* dd 转换或者复制文件
+* df 打印文件系统空间使用情况
+* dir 打印当前目录下的文件夹
+* dircolors 设定ls的颜色，修改LS_COLORS环境变量
+* dirname 从文件名中去掉程序名，只打印路径，和basename对应
+* du 打印文件夹空间使用情况
+ 
+ 
+* echo 显示文本
+* env 打印环境变量
+* expand 将tab转换为空格
+* expr 计算表达式的结果
+ 
+ 
+* factor 计算一个数的质因子
+* false 设置退出状态码为1然后退出
+* fmt 简单的文本格式化工具
+* fold 根据指定的宽度重新格式化文本
+ 
+ 
+* groups 打印所有的用户组
+ 
+ 
+* head 打印文件的前几行
+* hostid 打印当前主机的数字识别码
+ 
+ 
+* id 打印真实有效的用户和群组id
+* install 复制文件，设置属性
+ 
+ 
+* join 根据第1列合并2个文件
+ 
+ 
+* kill 给进程发送信号，或者列出信号
+ 
+ 
+* link 创建一个硬链接 link == ln
+* ln 给文件创建链接
+* logname 打印用户的登录名
+* ls 打印文件夹内容
+ 
+ 
+* md5sum 计算文件的md5值
+* mkdir 新建文件夹
+* mkfifo 创建命名管道
+* mknod 创建块设备或字符设备的特殊文件
+* mktemp 创建临时文件夹或目录
+* mv 移动或重命名文件
+ 
+ 
+* nice 调整程序运行的优先级
+* nl 类似cat，但同时打印行号
+* nohup 执行一个命令，忽略hangup信号
+* nproc 显示当前有个cpu核心可以用，包括超线程技术虚拟的核。。
+* numfmt 将数字转成/转回人类可读的字符串
+ 
+ 
+* od 将文件转换为8进制或其他进制
+ 
+ 
+* paste 按行合并2个文件
+* pathchk 检查路径的有效性和可移植性
+* pinky 轻量级的finger
+* pr 格式化文本文件，分页或分栏，以便于打印
+* printenv 打印出系统环境变量
+* printf 格式化和打印数据
+* ptx 读取指定的文本，从中创建重新整理的索引，并打印
+* pwd 打印当前目录
+ 
+ 
+* readlink 显示相对的符号链接的原身
+* realpath 显示文件的真实路径
+* rm 删除文件
+* rmdir 删除文件夹
+* runcon 使用特别的安全上下文执行命令
+ 
+ 
+* seq 打印序列化的数字
+* sha1sum 计算SHA1值
+* sha224sum 计算SHA224的值
+* sha256sum 计算SHA256的值
+* sha384sum 计算SHA384的值
+* sha512sum 计算SHA512的值
+* shred 多次覆盖一个文件以隐藏其内容，删除，粉碎。。
+* shuf 将文件内容打算，并在标准输出打印
+* sleep 暂停指定的时间
+* sort 根据文本内容排序
+* split 将文件分割成多份
+* stat 显示文件或文件系统的状态
+* stty 修改终端的设置
+* sum 检查和计算文件的块数目
+* sync 刷新文件系统缓冲区
+ 
+ 
+* tac 倒序打印文件，负的cat
+* tail 打印文件的最后几行
+* tee 从标准输入读取，写到标准输出和文件
+* test 检查文件类型和比较变量的值
+* timeout 指定一个时间限制然后执行一个命令
+* touch 修改文件时间戳，一般用来新建文件
+* tr 转换字符或删除字符
+* true 类似false，设置退出状态码为0然后退出
+* truncate 根据指定的大小减小或增大文件的大小
+* tsort 对文件执行拓扑排序
+* tty 打印当前连接到标准输入的终端的文件名
+ 
+ 
+* uname 打印系统信息
+* unexpand 将空格转化为tab，负的expand
+* uniq 去除文件中重复的连续行
+* unlink 移除文件，负的link
+* uptime 打印系统运行时间信息
+* users 打印当前登录到主机的用户名
+ 
+ 
+* vdir 打印文件夹内容，类似ls -l 
+ 
+ 
+* wc 计算文文件的函数，单词数和字符数
+* who 打印当前谁登录了
+* whoami 显示当前用户
+ 
+ 
+* yes 打印一系列的yes直到被kill
